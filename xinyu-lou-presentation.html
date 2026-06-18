@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商业贸进化史 × 信誉楼·运河生活中心</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --cream: #F2EDE4;
+    --red: #8B2A1A;
+    --red-light: #A33825;
+    --ink: #1A1410;
+    --ink-mid: #3D2E25;
+    --ink-soft: #7A6A5F;
+    --line: rgba(139,42,26,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: rgba(242,237,228,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .logo {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 0.1em;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  nav .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  nav .nav-links a:hover { color: var(--red); }
+
+  /* ── SLIDES ── */
+  .slide {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 48px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    background: var(--cream);
+    justify-content: flex-end;
+    padding-bottom: 80px;
+  }
+  .hero-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(120px, 18vw, 280px);
+    font-weight: 900;
+    color: rgba(139,42,26,0.06);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: -0.02em;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--red);
+  }
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(48px, 6vw, 96px);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--ink);
+    max-width: 800px;
+    margin-bottom: 24px;
+  }
+  .hero-title em {
+    color: var(--red);
+    font-style: normal;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+    max-width: 480px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .hero-question {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: 700;
+    color: var(--red);
+    max-width: 500px;
+    line-height: 1.5;
+    border-left: 3px solid var(--red);
+    padding-left: 20px;
+  }
+  .hero-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(139,42,26,0.12);
+    line-height: 1;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    margin-bottom: 64px;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .section-title .en {
+    font-family: 'Playfair Display', serif;
+    display: block;
+    font-size: 0.45em;
+    color: var(--ink-soft);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-top: 8px;
+  }
+
+  /* ── INTRO SLIDE ── */
+  #intro {
+    background: var(--red);
+    color: var(--cream);
+  }
+  #intro .section-label { color: rgba(242,237,228,0.6); }
+  #intro .section-label::after { background: rgba(242,237,228,0.2); }
+  #intro .section-title { color: var(--cream); }
+  #intro .section-title .en { color: rgba(242,237,228,0.5); }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+  }
+  .intro-text {
+    font-size: 16px;
+    line-height: 1.9;
+    color: rgba(242,237,228,0.85);
+    max-width: 480px;
+  }
+  .intro-big-question {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(20px, 2.8vw, 36px);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.6;
+    border-top: 1px solid rgba(242,237,228,0.3);
+    padding-top: 32px;
+  }
+  /* SVG wave decoration */
+  .wave-deco {
+    position: absolute;
+    bottom: 0; right: 0;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  /* ── ERA SLIDES ── */
+  .era-slide { background: var(--cream); }
+  .era-slide.dark { background: #1A1410; color: var(--cream); }
+
+  .era-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .era-left {}
+  .era-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(100px, 14vw, 200px);
+    font-weight: 900;
+    color: rgba(139,42,26,0.1);
+    line-height: 0.9;
+    margin-bottom: -20px;
+  }
+  .dark .era-number { color: rgba(242,237,228,0.08); }
+  .era-version {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .dark .era-version { color: #C97B6A; }
+  .era-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .era-name-en {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+  }
+  .dark .era-name-en { color: rgba(242,237,228,0.4); }
+  .era-logic {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 6px 16px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  .dark .era-logic { color: #C97B6A; border-color: #C97B6A; }
+  .era-desc {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--ink-mid);
+    margin-bottom: 24px;
+  }
+  .dark .era-desc { color: rgba(242,237,228,0.7); }
+  .era-highlight {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    border-left: 3px solid var(--red);
+    padding-left: 16px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .dark .era-highlight { color: var(--cream); }
+
+  .era-right {}
+  .era-arch-box {
+    background: rgba(139,42,26,0.06);
+    border: 1px solid var(--line);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+  }
+  .dark .era-arch-box {
+    background: rgba(242,237,228,0.04);
+    border-color: rgba(242,237,228,0.1);
+  }
+  .era-arch-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .dark .era-arch-label { color: #C97B6A; }
+  .era-arch-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink-mid);
+  }
+  .dark .era-arch-text { color: rgba(242,237,228,0.6); }
+
+  .era-consumer {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--red);
+    line-height: 1.5;
+  }
+  .dark .era-consumer { color: #C97B6A; }
+  .era-consumer-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .dark .era-consumer-label { color: rgba(242,237,228,0.4); }
+
+  /* SVG decorations */
+  .deco-circle {
+    position: absolute;
+    pointer-events: none;
+  }
+  .era-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .era-tag {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    background: rgba(139,42,26,0.08);
+    color: var(--red);
+  }
+  .dark .era-tag {
+    background: rgba(242,237,228,0.08);
+    color: rgba(242,237,228,0.6);
+  }
+
+  /* ── EVOLUTION TABLE SLIDE ── */
+  #evolution {
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .evo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 48px;
+  }
+  .evo-table th {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,237,228,0.4);
+    border-bottom: 1px solid rgba(242,237,228,0.1);
+    padding: 0 0 16px;
+    text-align: left;
+    font-weight: 400;
+  }
+  .evo-table td {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(242,237,228,0.07);
+    vertical-align: middle;
+  }
+  .evo-table td:first-child {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(242,237,228,0.15);
+    width: 100px;
+    line-height: 1;
+  }
+  .evo-era-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .evo-era-en {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(242,237,228,0.35);
+  }
+  .evo-center {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--red);
+    padding: 0 40px;
+  }
+  .evo-table tr:last-child .evo-center { color: #C97B6A; }
+  .evo-question {
+    font-size: 14px;
+    color: rgba(242,237,228,0.55);
+    line-height: 1.6;
+  }
+  .evo-summary {
+    margin-top: 48px;
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.6;
+    border-top: 1px solid rgba(242,237,228,0.1);
+    padding-top: 32px;
+  }
+  .evo-summary em {
+    color: #C97B6A;
+    font-style: normal;
+  }
+
+  /* ── 4.0 ANAYA SLIDE ── */
+  #era4 { background: var(--cream); }
+  .anaya-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .anaya-insight {
+    padding: 28px 32px;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .anaya-insight::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -10px; right: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(139,42,26,0.06);
+    line-height: 1;
+  }
+  .anaya-insight-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .anaya-insight-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .anaya-insight-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+  .anaya-diff {
+    grid-column: 1 / -1;
+    background: var(--red);
+    color: var(--cream);
+    padding: 40px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .anaya-diff-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--cream);
+  }
+  .anaya-diff-text {
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(242,237,228,0.8);
+  }
+  .anaya-diff-text strong {
+    color: var(--cream);
+    font-weight: 700;
+  }
+
+  /* ── PROJECT INTRO SLIDE ── */
+  #project-intro {
+    background: var(--cream);
+    min-height: 100vh;
+  }
+  .project-hero-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .project-tagline {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 900;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .project-tagline em { color: var(--red); font-style: normal; }
+  .project-tagline-en {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+  }
+  .project-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .stat-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--red);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ── BRAND SLIDE ── */
+  #brand { background: var(--ink); color: var(--cream); }
+  .brand-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(242,237,228,0.1);
+    margin-top: 48px;
+  }
+  .brand-pillar {
+    background: var(--ink);
+    padding: 40px 32px;
+  }
+  .brand-pillar-icon {
+    margin-bottom: 24px;
+  }
+  .brand-pillar-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+  .brand-pillar-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(242,237,228,0.6);
+  }
+  .brand-core {
+    margin-top: 48px;
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 700;
+    color: #C97B6A;
+    line-height: 1.7;
+    border-left: 3px solid #C97B6A;
+    padding-left: 24px;
+    max-width: 640px;
+  }
+
+  /* ── POSITIONING SLIDE ── */
+  #positioning { background: var(--cream); }
+  .pos-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+  }
+  .pos-card {
+    border: 1px solid var(--line);
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pos-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--red);
+  }
+  .pos-card-en {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .pos-card-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .pos-card-text {
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+  }
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 48px;
+  }
+  .ref-table th {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+    padding: 0 0 12px;
+    text-align: left;
+    font-weight: 400;
+  }
+  .ref-table td {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+  }
+  .ref-table td:first-child {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    padding-right: 24px;
+  }
+
+  /* ── IP SLIDE ── */
+  #ip { background: var(--red); color: var(--cream); }
+  .ip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .ip-card {
+    border-top: 1px solid rgba(242,237,228,0.3);
+    padding-top: 28px;
+  }
+  .ip-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(242,237,228,0.15);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .ip-tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,237,228,0.5);
+    margin-bottom: 8px;
+  }
+  .ip-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .ip-en {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(242,237,228,0.4);
+    margin-bottom: 20px;
+  }
+  .ip-text {
+    font-size: 13px;
+    line-height: 1.9;
+    color: rgba(242,237,228,0.75);
+  }
+
+  /* ── ARCH SLIDE ── */
+  #arch { background: var(--cream); }
+  .arch-strategies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    margin-top: 48px;
+  }
+  .arch-strat {
+    background: var(--cream);
+    padding: 36px 32px;
+  }
+  .arch-strat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(139,42,26,0.1);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .arch-strat-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .arch-strat-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+  .arch-axis {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .axis-item {
+    padding: 24px 28px;
+    background: rgba(139,42,26,0.05);
+    border-left: 3px solid var(--red);
+  }
+  .axis-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .axis-text {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* ── PROGRAM SLIDE ── */
+  #program { background: var(--ink); color: var(--cream); }
+  .program-bars {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .program-bar {
+    display: grid;
+    grid-template-columns: 120px 1fr 60px 200px;
+    gap: 20px;
+    align-items: center;
+  }
+  .program-name {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .bar-track {
+    height: 2px;
+    background: rgba(242,237,228,0.1);
+    position: relative;
+  }
+  .bar-fill {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    background: var(--red);
+    transition: width 1s ease;
+  }
+  .program-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #C97B6A;
+    text-align: right;
+  }
+  .program-desc {
+    font-size: 12px;
+    color: rgba(242,237,228,0.4);
+    line-height: 1.5;
+  }
+
+  /* ── CONCLUSION ── */
+  #conclusion { background: var(--red); color: var(--cream); }
+  .conclusion-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .conclusion-lines {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 700;
+    line-height: 2;
+    color: var(--cream);
+  }
+  .conclusion-lines span {
+    display: block;
+    opacity: 0.6;
+  }
+  .conclusion-lines span.active { opacity: 1; }
+  .conclusion-final {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 700;
+    line-height: 1.8;
+    color: rgba(242,237,228,0.9);
+    border-top: 1px solid rgba(242,237,228,0.2);
+    padding-top: 32px;
+  }
+  .conclusion-final strong {
+    color: var(--cream);
+    font-size: 1.1em;
+  }
+  .conclusion-meta {
+    margin-top: 40px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,237,228,0.4);
+  }
+
+  /* ── SVG DECORATIONS ── */
+  .deco { position: absolute; pointer-events: none; }
+
+  /* ── SCROLL INDICATOR ── */
+  .scroll-hint {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 50;
+  }
+  .scroll-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(139,42,26,0.3);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .scroll-dot.active {
+    background: var(--red);
+    height: 16px;
+    border-radius: 2px;
+  }
+
+  /* ── UTILITY ── */
+  .red { color: var(--red); }
+  .mt-32 { margin-top: 32px; }
+  .mt-48 { margin-top: 48px; }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    nav .nav-links { display: none; }
+    .slide { padding: 100px 24px 60px; }
+    .era-layout, .intro-grid, .anaya-grid, .pos-layout,
+    .ip-grid, .arch-strategies, .arch-axis, .conclusion-layout,
+    .project-hero-layout, .brand-pillars { grid-template-columns: 1fr; }
+    .anaya-diff { grid-template-columns: 1fr; }
+    .program-bar { grid-template-columns: 80px 1fr 50px; }
+    .program-desc { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">信誉楼 · 运河生活中心</div>
+  <ul class="nav-links">
+    <li><a href="#cover">封面</a></li>
+    <li><a href="#hero">商贸史</a></li>
+    <li><a href="#era1">1.0</a></li>
+    <li><a href="#era2">2.0</a></li>
+    <li><a href="#era3">3.0</a></li>
+    <li><a href="#era4">4.0</a></li>
+    <li><a href="#project-intro">项目</a></li>
+    <li><a href="#conclusion">结语</a></li>
+  </ul>
+</nav>
+
+<!-- SCROLL DOTS -->
+<div class="scroll-hint" id="scrollDots"></div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- COVER -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="cover" style="background:var(--ink);color:var(--cream);justify-content:space-between;padding-top:140px;padding-bottom:80px;">
+  <svg class="deco" style="top:0;left:0;width:100%;height:100%;opacity:0.04" viewBox="0 0 1440 900" preserveAspectRatio="none">
+    <line x1="520" y1="0" x2="520" y2="900" stroke="white" stroke-width="2"/>
+    <line x1="540" y1="0" x2="540" y2="900" stroke="white" stroke-width="0.5"/>
+    <line x1="560" y1="0" x2="560" y2="900" stroke="white" stroke-width="0.5"/>
+    <path d="M0,300 Q360,220 720,300 Q1080,380 1440,300" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M0,500 Q360,420 720,500 Q1080,580 1440,500" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M0,700 Q360,620 720,700 Q1080,780 1440,700" stroke="white" stroke-width="1" fill="none"/>
+    <circle cx="1200" cy="450" r="200" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="1200" cy="450" r="130" stroke="white" stroke-width="0.3" fill="none"/>
+  </svg>
+  <div>
+    <div style="font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(242,237,228,0.35);margin-bottom:60px;display:flex;align-items:center;gap:12px">
+      <span style="display:inline-block;width:32px;height:1px;background:rgba(242,237,228,0.35)"></span>
+      TEKUMA · 项目策划提案
+    </div>
+    <div style="font-family:'Noto Serif SC',serif;font-size:clamp(14px,1.5vw,18px);font-weight:400;color:rgba(242,237,228,0.4);letter-spacing:0.2em;margin-bottom:20px">
+      XINYU LOU · CANAL LIFE CENTER
+    </div>
+    <h1 style="font-family:'Noto Serif SC',serif;font-size:clamp(48px,7vw,108px);font-weight:900;line-height:1.05;color:var(--cream);margin-bottom:24px;letter-spacing:-0.01em">
+      信誉楼·<span style="color:#C97B6A">运河</span><br>生活中心
+    </h1>
+    <div style="font-family:'Noto Sans SC',sans-serif;font-size:clamp(14px,1.6vw,20px);font-weight:300;color:rgba(242,237,228,0.45);letter-spacing:0.08em;margin-top:16px">
+      信誉楼沧州总部店项目策划提案
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(242,237,228,0.3);line-height:2">
+      TEKUMA<br>2026年6月
+    </div>
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(80px,12vw,180px);font-weight:900;color:rgba(242,237,228,0.05);line-height:1;letter-spacing:-0.03em">
+      2026
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="hero">
+  <div class="hero-bg-text">商业</div>
+
+  <!-- abstract deco: canal lines -->
+  <svg class="deco" style="top:0;right:0;width:380px;height:100vh;opacity:0.07" viewBox="0 0 380 800" fill="none">
+    <line x1="300" y1="0" x2="300" y2="800" stroke="#8B2A1A" stroke-width="1"/>
+    <line x1="320" y1="0" x2="320" y2="800" stroke="#8B2A1A" stroke-width="0.5"/>
+    <line x1="340" y1="0" x2="340" y2="800" stroke="#8B2A1A" stroke-width="0.5"/>
+    <path d="M280,200 Q310,300 280,400 Q250,500 280,600" stroke="#8B2A1A" stroke-width="1.5" fill="none"/>
+    <circle cx="300" cy="250" r="40" stroke="#8B2A1A" stroke-width="0.5" fill="none"/>
+    <circle cx="300" cy="550" r="60" stroke="#8B2A1A" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="hero-eyebrow">商业贸进化史 × 信誉楼·运河生活中心</div>
+  <h1 class="hero-title">四十年商贸史，<br><em>不同时代人</em>的需求回应</h1>
+  <p class="hero-subtitle">从货的时代到归属的时代——<br>中国商业地产四十年进化与下一代商业的答案</p>
+
+  <div class="hero-bottom">
+    <div class="hero-question">
+      人们，为什么还要<br>专程出门，来到这里？
+    </div>
+    <div class="hero-num">40</div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- INTRO -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="intro">
+  <svg class="wave-deco" width="500" height="400" viewBox="0 0 500 400">
+    <path d="M0,200 Q125,100 250,200 Q375,300 500,200" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M0,240 Q125,140 250,240 Q375,340 500,240" stroke="white" stroke-width="0.5" fill="none"/>
+    <path d="M0,160 Q125,60 250,160 Q375,260 500,160" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="250" cy="200" r="120" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="250" cy="200" r="80" stroke="white" stroke-width="0.3" fill="none"/>
+  </svg>
+
+  <div class="section-header">
+    <div class="section-label" style="color:rgba(242,237,228,0.5)">序言 · Preface</div>
+    <h2 class="section-title" style="color:var(--cream)">
+      一个问题<br>决定了一切
+      <span class="en">One Question · Everything</span>
+    </h2>
+  </div>
+
+  <div class="intro-grid">
+    <div>
+      <p class="intro-text">
+        电商已经解决了「购买」。<br><br>
+        城市里的购物中心也越来越像彼此的复制品。<br><br>
+        信誉楼从1985年起步，用四十年只做了一件事——把顾客当朋友。这件听起来简单的事，在今天反而成了最难复制的竞争壁垒。
+      </p>
+    </div>
+    <div>
+      <p class="intro-big-question">
+        人们，为什么还要<br>专程出门，来到这里？<br><br>
+        答案不在「卖什么」，<br>而在「是谁、以及如何待人」。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ERA 1.0 -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide era-slide" id="era1">
+  <!-- abstract deco: grid -->
+  <svg class="deco" style="top:60px;right:40px;width:200px;height:200px;opacity:0.05" viewBox="0 0 200 200">
+    <line x1="0" y1="50" x2="200" y2="50" stroke="#8B2A1A" stroke-width="1"/>
+    <line x1="0" y1="100" x2="200" y2="100" stroke="#8B2A1A" stroke-width="1"/>
+    <line x1="0" y1="150" x2="200" y2="150" stroke="#8B2A1A" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="200" stroke="#8B2A1A" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="200" stroke="#8B2A1A" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="200" stroke="#8B2A1A" stroke-width="1"/>
+  </svg>
+
+  <div class="section-label">商业演进 · 第一阶段 · 1985—2005</div>
+  <div class="era-layout">
+    <div class="era-left">
+      <div class="era-number">1.0</div>
+      <div class="era-version">Ver. 1.0 · The Age of Goods</div>
+      <h2 class="era-name">货的时代</h2>
+      <div class="era-name-en">Goods-Centric Commerce</div>
+      <div class="era-logic">核心逻辑：以"货"为中心</div>
+      <p class="era-desc">
+        1985年，信誉楼从河北黄骅起步。那是一个商品稀缺的年代，商场的价值只有一件事：品类全、货源稳、价格透明。
+      </p>
+      <p class="era-desc">
+        信誉楼这个阶段最大的创新，不是卖了多少货，而是<strong>把诚信做成了制度</strong>——不打折、不促销、明码标价，开国内零售业无理由退换货之先河。导购工资从不与销售额挂钩，反设「为顾客省钱」专项补贴。
+      </p>
+      <div class="era-highlight">
+        这在当时是反常识的经营方式。<br>但它在说一件事：商业可以是一种被信任的关系。
+      </div>
+    </div>
+    <div class="era-right">
+      <div class="era-arch-box">
+        <div class="era-arch-label">建筑语言 · Architecture</div>
+        <p class="era-arch-text">大盒子、柱网齐、货架是主角。空间完全服务于商品陈列，采光不重要，坪效才是一切。层高压低、进深加大，最大化货架面积。</p>
+      </div>
+      <div class="era-tags">
+        <span class="era-tag">百货模式</span>
+        <span class="era-tag">柜台制</span>
+        <span class="era-tag">明码标价</span>
+        <span class="era-tag">自营为主</span>
+        <span class="era-tag">县域市场</span>
+      </div>
+      <div style="margin-top:32px">
+        <div class="era-consumer-label">消费者来商场的理由</div>
+        <div class="era-consumer">买东西。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ERA 2.0 -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide era-slide dark" id="era2">
+  <svg class="deco" style="bottom:40px;left:40px;width:240px;height:240px;opacity:0.06" viewBox="0 0 240 240">
+    <circle cx="120" cy="120" r="100" stroke="white" stroke-width="1" fill="none"/>
+    <circle cx="120" cy="120" r="70" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="120" cy="120" r="40" stroke="white" stroke-width="0.5" fill="none"/>
+    <line x1="20" y1="120" x2="220" y2="120" stroke="white" stroke-width="0.5"/>
+    <line x1="120" y1="20" x2="120" y2="220" stroke="white" stroke-width="0.5"/>
+  </svg>
+
+  <div class="section-label" style="color:rgba(201,123,106,0.8)">商业演进 · 第二阶段 · 2005—2018</div>
+  <div class="era-layout">
+    <div class="era-left">
+      <div class="era-number">2.0</div>
+      <div class="era-version" style="color:#C97B6A">Ver. 2.0 · The Age of Place</div>
+      <h2 class="era-name">场的时代</h2>
+      <div class="era-name-en">Place-Centric Commerce</div>
+      <div class="era-logic">核心逻辑：以"场"为中心</div>
+      <p class="era-desc">
+        万达、华润、龙湖带动购物中心浪潮席卷全国。商场从「买货的地方」变成了「去逛的地方」。
+      </p>
+      <p class="era-desc">
+        业态组合逻辑出现：主力店 + 餐饮 + 儿童 + 娱乐。<strong style="color:var(--cream)">延长停留时间</strong>，成为商业地产的核心命题。信誉楼也在这阶段持续扩张，从县域走向城市。
+      </p>
+      <div class="era-highlight">
+        消费者来商场，有了第二个理由。<br>但问题也悄悄埋下——所有商场开始长得越来越像彼此的复制品。
+      </div>
+    </div>
+    <div class="era-right">
+      <div class="era-arch-box">
+        <div class="era-arch-label">建筑语言 · Architecture</div>
+        <p class="era-arch-text">层高提升、中庭贯通、立面开始有品牌感。中庭、扶梯、中央广场成为建筑核心语言。空间开始有了「场景意识」，动线设计取代坪效成为核心。</p>
+      </div>
+      <div class="era-tags">
+        <span class="era-tag">购物中心</span>
+        <span class="era-tag">主力店策略</span>
+        <span class="era-tag">餐饮引入</span>
+        <span class="era-tag">中庭广场</span>
+        <span class="era-tag">城市扩张</span>
+      </div>
+      <div style="margin-top:32px">
+        <div class="era-consumer-label">消费者来商场的理由</div>
+        <div class="era-consumer">逛、吃、带孩子。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ERA 3.0 -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide era-slide" id="era3">
+  <svg class="deco" style="top:80px;right:60px;width:180px;height:360px;opacity:0.05" viewBox="0 0 180 360">
+    <rect x="20" y="20" width="140" height="320" stroke="#8B2A1A" stroke-width="1" fill="none"/>
+    <rect x="40" y="60" width="100" height="60" stroke="#8B2A1A" stroke-width="0.5" fill="none"/>
+    <rect x="40" y="160" width="100" height="60" stroke="#8B2A1A" stroke-width="0.5" fill="none"/>
+    <rect x="40" y="260" width="100" height="60" stroke="#8B2A1A" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="section-label">商业演进 · 第三阶段 · 2018—2024</div>
+  <div class="era-layout">
+    <div class="era-left">
+      <div class="era-number">3.0</div>
+      <div class="era-version">Ver. 3.0 · The Age of Experience</div>
+      <h2 class="era-name">体验的时代</h2>
+      <div class="era-name-en">Experience-Centric Commerce</div>
+      <div class="era-logic">核心逻辑：以"体验"为中心</div>
+      <p class="era-desc">
+        电商解决了「购买」。购物中心的货架功能被大幅替代。商场必须提供<strong>线上永远无法给予的东西</strong>：感官刺激、社交场景、身份认同。
+      </p>
+      <p class="era-desc">
+        胖东来的崛起是最好的注脚——让人跨城而来，靠的不是商品，是「被当作朋友对待」的感受。服务本身成为体验，体验本身成为目的地。
+      </p>
+      <div class="era-highlight">
+        这个时代最稀缺的体验是：<br>在一个被推销、被算计的消费环境里，<br>被真正当作朋友。
+      </div>
+    </div>
+    <div class="era-right">
+      <div class="era-arch-box">
+        <div class="era-arch-label">建筑语言 · Architecture</div>
+        <p class="era-arch-text">打开边界，引入街道感，创造停留而非流动的空间。室内Mall与城市街道的界限模糊。屋顶、水岸、广场全部激活。第五立面开始被重视。街区化、文化化、在地化成为关键词。</p>
+      </div>
+      <div class="era-tags">
+        <span class="era-tag">体验业态</span>
+        <span class="era-tag">街区化</span>
+        <span class="era-tag">在地文化</span>
+        <span class="era-tag">打卡场景</span>
+        <span class="era-tag">目的地化</span>
+      </div>
+      <div style="margin-top:32px">
+        <div class="era-consumer-label">消费者来商场的理由</div>
+        <div class="era-consumer">这里能给我<br>什么感受？</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- EVOLUTION TABLE -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="evolution">
+  <svg class="deco" style="top:50%;right:0;transform:translateY(-50%);width:300px;height:300px;opacity:0.04" viewBox="0 0 300 300">
+    <circle cx="150" cy="150" r="140" stroke="white" stroke-width="1" fill="none"/>
+    <circle cx="150" cy="150" r="90" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="150" cy="150" r="40" stroke="white" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="section-label" style="color:rgba(201,123,106,0.7)">四个时代 · Four Eras · 总结</div>
+  <h2 class="section-title" style="color:var(--cream)">
+    进化轨迹
+    <span class="en" style="color:rgba(242,237,228,0.35)">The Arc of Retail Evolution</span>
+  </h2>
+
+  <table class="evo-table">
+    <thead>
+      <tr>
+        <th>时代</th>
+        <th>名称</th>
+        <th>中心</th>
+        <th>消费者的核心问题</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.0</td>
+        <td><div class="evo-era-name">货的时代</div><div class="evo-era-en">The Age of Goods · 1985—2005</div></td>
+        <td><div class="evo-center">货</div></td>
+        <td><div class="evo-question">我能买到什么？品类够不够全，价格够不够透明。</div></td>
+      </tr>
+      <tr>
+        <td>2.0</td>
+        <td><div class="evo-era-name">场的时代</div><div class="evo-era-en">The Age of Place · 2005—2018</div></td>
+        <td><div class="evo-center">场</div></td>
+        <td><div class="evo-question">这里有什么好逛的？动线够不够丰富，业态够不够多元。</div></td>
+      </tr>
+      <tr>
+        <td>3.0</td>
+        <td><div class="evo-era-name">体验的时代</div><div class="evo-era-en">The Age of Experience · 2018—2024</div></td>
+        <td><div class="evo-center">体验</div></td>
+        <td><div class="evo-question">这里能给我什么感受？够不够特别，值不值得发朋友圈。</div></td>
+      </tr>
+      <tr>
+        <td>4.0</td>
+        <td><div class="evo-era-name">归属的时代</div><div class="evo-era-en">The Age of Belonging · 2025—</div></td>
+        <td><div class="evo-center" style="color:#C97B6A">归属</div></td>
+        <td><div class="evo-question">这里是我的地方吗？这里的人理解我吗？</div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="evo-summary">
+    1.0卖货，2.0卖场，3.0卖体验，<em>4.0卖归属。</em><br>
+    而归属，恰好是信誉楼做了四十年、别人一天也学不走的东西。
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ERA 4.0 - ANAYA -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="era4">
+  <div class="section-label">商业演进 · 第四阶段 · 2025—</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px">
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(80px,12vw,160px);font-weight:900;color:rgba(139,42,26,0.08);line-height:0.9;margin-bottom:-16px">4.0</div>
+      <div class="era-version">Ver. 4.0 · The Age of Belonging</div>
+      <h2 class="era-name">归属的时代</h2>
+      <div class="era-logic">核心逻辑：以"归属"为中心</div>
+    </div>
+    <div style="padding:28px 32px;background:rgba(139,42,26,0.05);border:1px solid var(--line)">
+      <div style="font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:16px">三个「不再管用」</div>
+      <div style="font-family:'Noto Serif SC',serif;font-size:15px;font-weight:700;color:var(--ink);line-height:2">
+        折扣不再管用<br>
+        场景不再管用<br>
+        <span style="color:var(--red)">关系，无法被复制</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 核心命题 -->
+  <div style="margin-bottom:32px;font-family:'Noto Serif SC',serif;font-size:clamp(18px,2.2vw,28px);font-weight:700;color:var(--red);border-left:3px solid var(--red);padding-left:20px;line-height:1.7">
+    让10,000个人来100次，<br>而不是让100万个人来1次。
+  </div>
+
+  <div class="anaya-grid">
+    <div class="anaya-insight" data-num="①">
+      <div class="anaya-insight-label">长期主义 · Long-termism</div>
+      <div class="anaya-insight-title">社群，是最强的护城河</div>
+      <p class="anaya-insight-text">阿那亚与信誉楼，走的是同一条路：不追求流量的峰值，而追求关系的深度。当一个地方让人产生归属感，人们会自发传播、反复回访、带来身边的人。社群一旦形成，便拥有自我生长的能力。</p>
+    </div>
+    <div class="anaya-insight" data-num="②">
+      <div class="anaya-insight-label">文化吸引力 · Cultural Gravity</div>
+      <div class="anaya-insight-title">文化，让空间有了时间维度</div>
+      <p class="anaya-insight-text">流量型商业是一次性的——打卡、离开、遗忘。文化型商业是累积的——每一次活动、每一个仪式、每一段记忆，都在加深人与这个地方的连接。运河、信誉、沧州，都是有时间厚度的文化资产。</p>
+    </div>
+    <div class="anaya-diff">
+      <div class="anaya-diff-title">
+        持续吸引力的<br>三个来源
+      </div>
+      <div class="anaya-diff-text">
+        <strong>社群认同</strong>——让人觉得「这里有和我一样的人」，主动回来、主动带人来。<br><br>
+        <strong>文化仪式</strong>——节气市集、运河活动、信誉楼开放日，让到访变成一种有意义的习惯。<br><br>
+        <strong>被信任的关系</strong>——四十年积累的品牌信任，是任何营销预算都买不来的持续吸引力。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PROJECT INTRO -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="project-intro">
+  <svg class="deco" style="top:100px;right:0;width:320px;height:500px;opacity:0.06" viewBox="0 0 320 500">
+    <!-- canal water lines -->
+    <path d="M160,0 L160,500" stroke="#8B2A1A" stroke-width="2"/>
+    <path d="M140,0 L140,500" stroke="#8B2A1A" stroke-width="0.5"/>
+    <path d="M180,0 L180,500" stroke="#8B2A1A" stroke-width="0.5"/>
+    <path d="M0,150 Q80,100 160,150 Q240,200 320,150" stroke="#8B2A1A" stroke-width="1" fill="none"/>
+    <path d="M0,250 Q80,200 160,250 Q240,300 320,250" stroke="#8B2A1A" stroke-width="1" fill="none"/>
+    <path d="M0,350 Q80,300 160,350 Q240,400 320,350" stroke="#8B2A1A" stroke-width="1" fill="none"/>
+  </svg>
+
+  <div class="section-label">信誉楼·运河生活中心 · Xinyu Lou · Canal Life Center</div>
+
+  <div class="project-hero-layout">
+    <div>
+      <p class="project-tagline">
+        京津冀最值得<em>专程到访</em>的<br>生活目的地与文化会客厅
+      </p>
+      <p class="project-tagline-en">The Most Worthy Destination in Jing-Jin-Ji Region</p>
+
+      <div style="font-size:14px;line-height:1.9;color:var(--ink-soft);max-width:480px;margin-bottom:40px">
+        一个内核：以「视客为友、以信为本」的品牌精神为地基，而非以坪效为地基。<br><br>
+        不做沧州又一个购物中心，做京津冀一个独一无二的目的地。
+      </div>
+
+      <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px">河北·沧州｜解放西路 × 迎宾南大道</div>
+    </div>
+
+    <div class="project-stats">
+      <div class="stat-item">
+        <div class="stat-num">15—18</div>
+        <div class="stat-label">万㎡ 商业面积<br><span style="color:var(--ink-soft);font-size:11px">Commercial GFA</span></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">万㎡ 企业总部<br><span style="color:var(--ink-soft);font-size:11px">HQ Office</span></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7.8</div>
+        <div class="stat-label">公顷 用地面积（117亩）<br><span style="color:var(--ink-soft);font-size:11px">Site Area</span></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">300</div>
+        <div class="stat-label">米 运河生活轴<br><span style="color:var(--ink-soft);font-size:11px">Canal Life Axis</span></div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">40</div>
+        <div class="stat-label">年 品牌积淀<br><span style="color:var(--ink-soft);font-size:11px">Years of Trust</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- BRAND -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="brand">
+  <svg class="deco" style="top:50%;right:40px;transform:translateY(-50%);width:200px;height:200px;opacity:0.04" viewBox="0 0 200 200">
+    <polygon points="100,10 190,190 10,190" stroke="white" stroke-width="1" fill="none"/>
+    <polygon points="100,40 165,170 35,170" stroke="white" stroke-width="0.5" fill="none"/>
+    <polygon points="100,70 140,150 60,150" stroke="white" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="section-label" style="color:rgba(201,123,106,0.7)">品牌即地基 · Brand as Foundation</div>
+  <h2 class="section-title" style="color:var(--cream)">
+    信誉楼的精神资产
+    <span class="en" style="color:rgba(242,237,228,0.3)">40 Years of Trust · The Unreplicable</span>
+  </h2>
+
+  <div class="brand-pillars">
+    <div class="brand-pillar">
+      <div class="brand-pillar-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="#C97B6A" stroke-width="1"/>
+          <path d="M12,20 Q20,12 28,20 Q20,28 12,20" stroke="#C97B6A" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="brand-pillar-title">视客为友</div>
+      <p class="brand-pillar-text">顾客不是盈利的手段，而是被服务的朋友。员工工资从不与销售额挂钩，反设「为顾客省钱」专项补贴。导购是帮顾客解决问题的专家，不是推销商品的生意人。</p>
+    </div>
+    <div class="brand-pillar">
+      <div class="brand-pillar-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <rect x="4" y="4" width="32" height="32" stroke="#C97B6A" stroke-width="1"/>
+          <line x1="4" y1="20" x2="36" y2="20" stroke="#C97B6A" stroke-width="0.5"/>
+          <line x1="20" y1="4" x2="20" y2="36" stroke="#C97B6A" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="brand-pillar-title">员工第一</div>
+      <p class="brand-pillar-text">企业使命是「让员工体现自身价值、享有成功人生」。创始人张洪瑞将近乎全部股份分给员工，探索一种「无终极所有者」的企业归属模式。</p>
+    </div>
+    <div class="brand-pillar">
+      <div class="brand-pillar-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M8,32 L20,8 L32,32" stroke="#C97B6A" stroke-width="1" fill="none"/>
+          <line x1="12" y1="24" x2="28" y2="24" stroke="#C97B6A" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="brand-pillar-title">价值最大化</div>
+      <p class="brand-pillar-text">不打折、不促销、明码标价。对供应商不拖欠、不吃回扣。把「诚信」做成了一整套制度，而不是一句口号。这是区别于一切竞争对手的根本。</p>
+    </div>
+  </div>
+
+  <div class="brand-core">
+    在一个被推销、被算计的消费时代，<br>「被当作朋友」本身，就是最稀缺的体验。
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- POSITIONING -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="positioning">
+  <div class="section-label">战略定位 · Strategic Positioning</div>
+  <h2 class="section-title">
+    两重身份
+    <span class="en">Dual Identity · Life Destination × Cultural Living Room</span>
+  </h2>
+
+  <div class="pos-layout">
+    <div class="pos-card">
+      <div class="pos-card-en">Life Destination · 生活目的地</div>
+      <div class="pos-card-title">生活目的地</div>
+      <p class="pos-card-text">把信誉楼「视客为友」的服务关系场景化、生活化，让人因为「这里待人不一样」而愿意专程前来、长时间停留、反复到访。<br><br>服务，本身就是产品。</p>
+    </div>
+    <div class="pos-card">
+      <div class="pos-card-en">Cultural Living Room · 文化会客厅</div>
+      <div class="pos-card-title">文化会客厅</div>
+      <p class="pos-card-text">把信誉楼「诚信、良心、把人当人」的价值观放大为城市公共文化，成为沧州人愿意带客人来、外地人愿意专程来的「城市客厅」。<br><br>文化，本身就是吸引力。</p>
+    </div>
+  </div>
+
+  <table class="ref-table mt-48">
+    <thead>
+      <tr>
+        <th>参照</th>
+        <th>核心逻辑</th>
+        <th>对本项目的启发</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>胖东来</td>
+        <td>服务即目的地</td>
+        <td>商场不是卖货场，而是值得跨城而来的生活体验</td>
+      </tr>
+      <tr>
+        <td>华润后海</td>
+        <td>总部即城市</td>
+        <td>总部不是办公楼，而是向公众开放的城市客厅</td>
+      </tr>
+      <tr>
+        <td>阿那亚</td>
+        <td>归属即目的地</td>
+        <td>让人因为认同而来，因为归属而留</td>
+      </tr>
+      <tr>
+        <td style="color:var(--red)">信誉楼</td>
+        <td>信誉即地标</td>
+        <td>把四十年的待人之道，升级为城市的目的地与会客厅</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- THREE IPs -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="ip">
+  <svg class="deco" style="bottom:40px;right:40px;width:280px;height:280px;opacity:0.08" viewBox="0 0 280 280">
+    <!-- L-shaped site abstraction -->
+    <path d="M40,40 L40,240 L160,240 L160,160 L240,160 L240,40 Z" stroke="white" stroke-width="1" fill="none"/>
+    <line x1="40" y1="140" x2="240" y2="140" stroke="white" stroke-width="0.3"/>
+    <line x1="140" y1="40" x2="140" y2="240" stroke="white" stroke-width="0.3"/>
+    <!-- canal line -->
+    <line x1="90" y1="40" x2="90" y2="240" stroke="white" stroke-width="2"/>
+  </svg>
+
+  <div class="section-label" style="color:rgba(242,237,228,0.5)">三大核心IP · Three Core IPs</div>
+  <h2 class="section-title" style="color:var(--cream)">
+    空间 · 内容 · 品牌
+    <span class="en" style="color:rgba(242,237,228,0.3)">Space × Content × Brand</span>
+  </h2>
+
+  <div class="ip-grid">
+    <div class="ip-card">
+      <div class="ip-num">①</div>
+      <div class="ip-tag">空间IP · Space</div>
+      <div class="ip-title">运河生活轴</div>
+      <div class="ip-en">Canal Life Axis</div>
+      <p class="ip-text">以约300米的南北向水渠为主轴，串起主入口、中央广场与滨水街区，是项目的精神脊梁与差异化记忆点。<br><br>人因运河而停留。</p>
+    </div>
+    <div class="ip-card">
+      <div class="ip-num">②</div>
+      <div class="ip-tag">内容IP · Content</div>
+      <div class="ip-title">信誉服务场</div>
+      <div class="ip-en">Trust Service Stage</div>
+      <p class="ip-text">把「服务」本身做成可参观、可学习、可体验的内容——服务可视化、品牌体验馆、服务学院与实验室。<br><br>让待人之道，从看不见变成看得见。</p>
+    </div>
+    <div class="ip-card">
+      <div class="ip-num">③</div>
+      <div class="ip-tag">品牌IP · Brand</div>
+      <div class="ip-title">信誉楼总部</div>
+      <div class="ip-en">Open Headquarters</div>
+      <p class="ip-text">2万㎡企业总部不做封闭写字楼，而做向城市开放的「垂直会客厅」。展示、培训、活动向公众开放。<br><br>总部，成为城市认识信誉楼的第一窗口。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- ARCHITECTURE -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="arch">
+  <div class="section-label">规划与建筑 · Planning & Architecture</div>
+  <h2 class="section-title">
+    让运河穿过商业
+    <span class="en">Let the Canal Flow Through Commerce</span>
+  </h2>
+
+  <div class="arch-axis">
+    <div class="axis-item">
+      <div class="axis-label">一轴 · One Axis</div>
+      <div class="axis-text">运河生活轴<br>贯穿南北、组织全场</div>
+    </div>
+    <div class="axis-item">
+      <div class="axis-label">一广场 · One Square</div>
+      <div class="axis-text">中央城市广场<br>依水而设、承载公共生活</div>
+    </div>
+    <div class="axis-item">
+      <div class="axis-label">双核心 · Dual Core</div>
+      <div class="axis-text">商业核 × 总部核<br>并置共生、互相导流</div>
+    </div>
+  </div>
+
+  <div class="arch-strategies">
+    <div class="arch-strat">
+      <div class="arch-strat-num">01</div>
+      <div class="arch-strat-title">垂直城市客厅</div>
+      <p class="arch-strat-text">以中庭、退台与连廊把人流向上引导，让每一层都有停留与社交的理由，而非纯过道。价值观的物理化，从首层延伸至屋顶。</p>
+    </div>
+    <div class="arch-strat">
+      <div class="arch-strat-num">02</div>
+      <div class="arch-strat-title">开放运河街区</div>
+      <p class="arch-strat-text">沿水渠展开低密度、可步行的街区界面，模糊「室内Mall」与「城市街道」的边界。让运河不只是景观，而是可穿行、可停留的生活场所。</p>
+    </div>
+    <div class="arch-strat">
+      <div class="arch-strat-num">03</div>
+      <div class="arch-strat-title">第五立面</div>
+      <p class="arch-strat-text">屋顶纳入设计——花园、跑道、观景与活动场。从体育场、高楼俯瞰时，看到的是一片可用的城市绿洲，而不是普通的商业屋顶。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PROGRAM -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="program">
+  <div class="section-label" style="color:rgba(201,123,106,0.7)">业态构成 · Program Mix</div>
+  <h2 class="section-title" style="color:var(--cream)">
+    五种业态，一种定位
+    <span class="en" style="color:rgba(242,237,228,0.3)">Five Programs · One Positioning</span>
+  </h2>
+
+  <div class="program-bars">
+    <div class="program-bar">
+      <div class="program-name">品质零售</div>
+      <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+      <div class="program-pct">30%</div>
+      <div class="program-desc">信誉楼自营与精选品牌，承接「被信任的购物」体验</div>
+    </div>
+    <div class="program-bar">
+      <div class="program-name">特色餐饮</div>
+      <div class="bar-track"><div class="bar-fill" style="width:25%"></div></div>
+      <div class="program-pct">25%</div>
+      <div class="program-desc">延长停留时间的核心，打造可专程而来的味觉目的地</div>
+    </div>
+    <div class="program-bar">
+      <div class="program-name">家庭体验</div>
+      <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+      <div class="program-pct">15%</div>
+      <div class="program-desc">亲子、运动、康养——把「全家一起来」做成高频理由</div>
+    </div>
+    <div class="program-bar">
+      <div class="program-name">文化内容</div>
+      <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+      <div class="program-pct">15%</div>
+      <div class="program-desc">运河文化、城市展演与公共活动，支撑「文化会客厅」</div>
+    </div>
+    <div class="program-bar">
+      <div class="program-name">品牌服务</div>
+      <div class="bar-track"><div class="bar-fill" style="width:15%"></div></div>
+      <div class="program-pct">15%</div>
+      <div class="program-desc">信誉服务场、品牌馆与会员空间，把服务本身变成内容</div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;font-size:13px;line-height:1.9;color:rgba(242,237,228,0.5);border-top:1px solid rgba(242,237,228,0.08);padding-top:24px;max-width:600px">
+    结构逻辑：「品质零售 + 特色餐饮」打底，保证人气与现金流；「家庭 + 文化 + 服务」拉开差异，塑造别处没有的目的地价值。
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- CONCLUSION -->
+<!-- ═══════════════════════════════════════ -->
+<section class="slide" id="conclusion">
+  <svg class="deco" style="top:0;right:0;width:400px;height:100%;opacity:0.05" viewBox="0 0 400 800" preserveAspectRatio="none">
+    <path d="M200,0 Q200,200 100,400 Q0,600 200,800" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M250,0 Q250,200 150,400 Q50,600 250,800" stroke="white" stroke-width="1" fill="none"/>
+    <path d="M300,0 Q300,200 200,400 Q100,600 300,800" stroke="white" stroke-width="0.5" fill="none"/>
+  </svg>
+
+  <div class="section-label" style="color:rgba(242,237,228,0.4)">结语 · Conclusion</div>
+
+  <div class="conclusion-layout">
+    <div>
+      <div class="conclusion-lines">
+        <span>让人因为信誉楼而来，</span>
+        <span>因为运河而停留，</span>
+        <span>因为文化而聚集，</span>
+        <span class="active">因为服务而反复回访。</span>
+      </div>
+    </div>
+    <div>
+      <div class="conclusion-final">
+        当这四件事同时发生，<br>
+        沧州西部这块7.8公顷的土地，<br>
+        就不再只是一个商业项目——<br><br>
+        <strong>而是信誉楼用四十年的信誉，<br>递给一座城市的会客厅。</strong>
+      </div>
+      <div class="conclusion-meta">
+        信誉楼·运河生活中心｜沧州总部店<br>
+        Xinyu Lou · Canal Life Center · Cangzhou Flagship
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Scroll dots
+  const slides = document.querySelectorAll('.slide');
+  const dotsContainer = document.getElementById('scrollDots');
+
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'scroll-dot';
+    dot.onclick = () => slide.scrollIntoView({ behavior: 'smooth' });
+    dotsContainer.appendChild(dot);
+  });
+
+  const updateDots = () => {
+    const dots = dotsContainer.querySelectorAll('.scroll-dot');
+    slides.forEach((slide, i) => {
+      const rect = slide.getBoundingClientRect();
+      const visible = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+      dots[i].classList.toggle('active', visible);
+    });
+  };
+
+  window.addEventListener('scroll', updateDots, { passive: true });
+  updateDots();
+
+  // Animate bar fills on scroll
+  const bars = document.querySelectorAll('.bar-fill');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.style.width;
+      }
+    });
+  }, { threshold: 0.3 });
+
+  bars.forEach(bar => observer.observe(bar));
+</script>
+</body>
+</html>
