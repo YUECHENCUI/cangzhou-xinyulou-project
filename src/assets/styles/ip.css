@@ -1,0 +1,54 @@
+#ip {
+  background: var(--red);
+  color: var(--cream);
+}
+
+.ip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.ip-card {
+  border-top: 1px solid rgba(242, 237, 228, 0.3);
+  padding-top: 28px;
+}
+
+.ip-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(242, 237, 228, 0.15);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.ip-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(242, 237, 228, 0.5);
+  margin-bottom: 8px;
+}
+
+.ip-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.ip-en {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(242, 237, 228, 0.4);
+  margin-bottom: 20px;
+}
+
+.ip-text {
+  font-size: 13px;
+  line-height: 1.9;
+  color: rgba(242, 237, 228, 0.75);
+}

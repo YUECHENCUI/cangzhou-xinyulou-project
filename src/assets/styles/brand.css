@@ -1,0 +1,47 @@
+#brand {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.brand-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(242, 237, 228, 0.1);
+  margin-top: 48px;
+}
+
+.brand-pillar {
+  background: var(--ink);
+  padding: 40px 32px;
+}
+
+.brand-pillar-icon {
+  margin-bottom: 24px;
+}
+
+.brand-pillar-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+
+.brand-pillar-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(242, 237, 228, 0.6);
+}
+
+.brand-core {
+  margin-top: 48px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700;
+  color: #C97B6A;
+  line-height: 1.7;
+  border-left: 3px solid #C97B6A;
+  padding-left: 24px;
+  max-width: 640px;
+}

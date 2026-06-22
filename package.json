@@ -1,0 +1,13 @@
+{
+  "name": "cangzhou-xinyulou-project",
+  "version": "1.0.0",
+  "description": "信誉楼·港湾生活中心 - 项目概念设计提案",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

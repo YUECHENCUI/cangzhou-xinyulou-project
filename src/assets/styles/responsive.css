@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 24px;
+  }
+  nav .nav-links {
+    display: none;
+  }
+  .slide {
+    padding: 100px 24px 60px;
+  }
+  .era-layout, .intro-grid, .anaya-grid, .pos-layout,
+  .ip-grid, .arch-strategies, .arch-axis, .conclusion-layout,
+  .project-hero-layout, .brand-pillars {
+    grid-template-columns: 1fr;
+  }
+  .anaya-diff {
+    grid-template-columns: 1fr;
+  }
+  .program-bar {
+    grid-template-columns: 80px 1fr 50px;
+  }
+  .program-desc {
+    display: none;
+  }
+  .full-image-caption {
+    left: 24px;
+    right: 24px;
+    bottom: 28px;
+  }
+  .full-image-text {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}

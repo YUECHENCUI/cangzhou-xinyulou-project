@@ -1,0 +1,80 @@
+#era4 {
+  background: var(--cream);
+}
+
+.anaya-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.anaya-insight {
+  padding: 28px 32px;
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.anaya-insight::before {
+  content: attr(data-num);
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(139, 42, 26, 0.06);
+  line-height: 1;
+}
+
+.anaya-insight-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.anaya-insight-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.anaya-insight-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.anaya-diff {
+  grid-column: 1 / -1;
+  background: var(--red);
+  color: var(--cream);
+  padding: 40px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.anaya-diff-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--cream);
+}
+
+.anaya-diff-text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(242, 237, 228, 0.8);
+}
+
+.anaya-diff-text strong {
+  color: var(--cream);
+  font-weight: 700;
+}

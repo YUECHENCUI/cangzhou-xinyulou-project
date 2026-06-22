@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --cream: #F2EDE4;
+  --red: #8B2A1A;
+  --red-light: #A33825;
+  --ink: #1A1410;
+  --ink-mid: #3D2E25;
+  --ink-soft: #7A6A5F;
+  --line: rgba(139, 42, 26, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.red {
+  color: var(--red);
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}

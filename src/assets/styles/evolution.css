@@ -1,0 +1,84 @@
+#evolution {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.evo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 48px;
+}
+
+.evo-table th {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(242, 237, 228, 0.4);
+  border-bottom: 1px solid rgba(242, 237, 228, 0.1);
+  padding: 0 0 16px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.evo-table td {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(242, 237, 228, 0.07);
+  vertical-align: middle;
+}
+
+.evo-table td:first-child {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(242, 237, 228, 0.15);
+  width: 100px;
+  line-height: 1;
+}
+
+.evo-era-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.evo-era-en {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(242, 237, 228, 0.35);
+}
+
+.evo-center {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--red);
+  padding: 0 40px;
+}
+
+.evo-table tr:last-child .evo-center {
+  color: #C97B6A;
+}
+
+.evo-question {
+  font-size: 14px;
+  color: rgba(242, 237, 228, 0.55);
+  line-height: 1.6;
+}
+
+.evo-summary {
+  margin-top: 48px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.6;
+  border-top: 1px solid rgba(242, 237, 228, 0.1);
+  padding-top: 32px;
+}
+
+.evo-summary em {
+  color: #C97B6A;
+  font-style: normal;
+}

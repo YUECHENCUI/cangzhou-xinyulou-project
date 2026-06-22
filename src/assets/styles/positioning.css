@@ -1,0 +1,82 @@
+#positioning {
+  background: var(--cream);
+}
+
+.pos-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.pos-card {
+  border: 1px solid var(--line);
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pos-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--red);
+}
+
+.pos-card-en {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.pos-card-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.pos-card-text {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 48px;
+}
+
+.ref-table th {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 12px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.ref-table td {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+.ref-table td:first-child {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  padding-right: 24px;
+}

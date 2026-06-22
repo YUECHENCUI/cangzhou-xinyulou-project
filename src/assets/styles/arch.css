@@ -1,0 +1,68 @@
+#arch {
+  background: var(--cream);
+}
+
+.arch-strategies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  margin-top: 48px;
+}
+
+.arch-strat {
+  background: var(--cream);
+  padding: 36px 32px;
+}
+
+.arch-strat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: rgba(139, 42, 26, 0.1);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.arch-strat-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.arch-strat-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.arch-axis {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.axis-item {
+  padding: 24px 28px;
+  background: rgba(139, 42, 26, 0.05);
+  border-left: 3px solid var(--red);
+}
+
+.axis-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.axis-text {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+}

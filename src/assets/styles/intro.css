@@ -1,0 +1,52 @@
+#intro {
+  background: var(--red);
+  color: var(--cream);
+}
+
+#intro .section-label {
+  color: rgba(242, 237, 228, 0.5);
+}
+
+#intro .section-label::after {
+  background: rgba(242, 237, 228, 0.2);
+}
+
+#intro .section-title {
+  color: var(--cream);
+}
+
+#intro .section-title .en {
+  color: rgba(242, 237, 228, 0.3);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.intro-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(242, 237, 228, 0.85);
+  max-width: 480px;
+}
+
+.intro-big-question {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(20px, 2.8vw, 36px);
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.6;
+  border-top: 1px solid rgba(242, 237, 228, 0.3);
+  padding-top: 32px;
+}
+
+.wave-deco {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.08;
+  pointer-events: none;
+}
