@@ -46,32 +46,27 @@
 ✅ **备份**
 - `index-original.html` - 原始文件备份
 
-### 待完成的工作
+### 当前状态
 
-要使新架构完全可用，还需要完成以下步骤：
+新架构已可用，`src/index.html` 包含完整的 19 个展示章节。
 
-#### 1. 补充完整的 src/index.html
+#### 图片资源（已完成）
 
-当前的 `src/index.html` 只包含了前几个章节，您需要：
-1. 打开 `index-original.html`
-2. 将从 `<section class="slide" id="era1">` 开始的所有后续内容复制到 `src/index.html` 中
-3. 确保 `</body>` 和 `</html>` 标签正确闭合
+四张项目愿景图已从 Base64 内嵌数据提取至 `src/assets/images/vision/`：
 
-#### 2. 提取图片资源（可选但推荐）
+- AVIF 作为现代浏览器的优先格式
+- WebP 作为兼容回退格式
+- HTML 使用 `<picture>` 根据浏览器能力自动选择
+- 图片启用延迟加载和异步解码
 
-当前图片以 Base64 编码内嵌在 HTML 中，建议：
-1. 创建 `src/assets/images/` 下的子目录（如 `hero/`, `project/` 等）
-2. 将 Base64 图片数据提取为独立的图片文件（.jpg, .png）
-3. 更新 `src/index.html` 中的图片引用为文件路径
-
-#### 3. 拆分 HTML 章节（可选，进阶）
+#### 拆分 HTML 章节（可选，进阶）
 
 如需进一步模块化，可以：
 1. 将每个 `<section class="slide">` 内容保存为独立的 HTML 文件到 `src/sections/` 目录
 2. 使用 JavaScript 或构建工具动态加载这些章节
 3. 或者保持单文件 HTML 但使用分离的 CSS
 
-#### 4. 安装依赖并测试
+#### 安装依赖并测试
 
 ```bash
 # 安装依赖

@@ -47,11 +47,10 @@ npm run build
 
 - [x] 创建新的目录结构
 - [x] 初始化项目配置文件 (package.json, vite.config.js)
-- [x] 开始拆分样式文件
+- [x] 完成样式文件拆分
 - [x] 创建架构文档
-- [ ] 完整拆分所有样式
+- [x] 将 Base64 图片提取为 AVIF/WebP 资源
 - [ ] 拆分 HTML 章节
-- [ ] 提取图片资源
 
 ## 详细文档
 
